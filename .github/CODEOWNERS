@@ -1,4 +1,4 @@
 ### Dev files 
 .github/workflows/build.yml           @eni-poc/development
-.github/workflows/pr-deploy.yml       @eni-poc/deployment
+.github/workflows/pr-deploy-qa.yml       @eni-poc/deployment
 
