@@ -38,6 +38,5 @@ jobs:
 
     - name: Set deployment status failure
       run: ./.github/scripts/deployment-status-failure.sh
-      if: failure()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
