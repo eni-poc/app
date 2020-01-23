@@ -35,10 +35,8 @@ jobs:
         name: 'ubuntu-18.04-1.8-${{github.sha}}.WAR'
         path: .
     - name: Build the Docker image
-      if: matrix.os == 'ubuntu-18.04' && matrix.java == '1.8'
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/$GITHUB_REPOSITORY/bookstore:$GITHUB_SHA
     - name: Publish to GitHub Package Registry
-      if: matrix.os == 'ubuntu-18.04' && matrix.java == '1.8'
       env:
         DOCKER_TOKEN: ${{secrets.GPR_TOKEN}}
         DOCKER_USER: <token>
