@@ -1,9 +1,7 @@
 name: Build, Test and Publish
 
 on:
-  push:
-    branches-ignore:
-    - master
+  pull_request
 
 jobs:
   build:
